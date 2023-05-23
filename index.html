@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product-Landing-Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./css-files/styles.css" />
+    <link rel="stylesheet" href="./css-files/media-query.css" />
+  </head>
+  <body>
+    <header id="home">
+      <nav>
+        <div class="logo">
+          <p>Zing<span class="logo-gold">.</span></p>
+        </div>
+        <div class="hamburger-Container">
+          <div class="default-hamburger">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </div>
+          <div class="close-hamburger">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-x-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="nav-links-Container">
+          <ul class="links">
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about us</a></li>
+            <li>
+              <a href="#"
+                ><select name="products" id="products-dropdown">
+                  <option value="all"><a href="#">products</a></option>
+                  <option value="all"><a href="#products">all</a></option>
+                  <option value="chair"><a href="#products">chair</a></option>
+                  <option value="table"><a href="#products">table</a></option>
+                  <option value="bed"><a href="#products">bed</a></option>
+                  <option value="cabinet">
+                    <a href="#products">cabinet</a>
+                  </option>
+                  <option value="sofa"><a href="#products">sofa</a></option>
+                </select></a
+              >
+            </li>
+            <li><a href="#testimnial">testimonial</a></li>
+          </ul>
+          <div class="nav-buttons">
+            <button class="first-nav-Btn">Contact</button>
+            <button class="second-nav-Btn">Buy Online</button>
+          </div>
+        </div>
+      </nav>
+      <div class="headingsDiv">
+        <h1>Amazing furniture for your home</h1>
+        <div class="overlayArrow">
+          <svg
+            max-width="197"
+            max-height="230"
+            min-width = "100"
+            min-height = "130"
+            viewBox="0 0 197 230"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_103_56)">
+              <path
+                d="M125.127 212.895C126.48 212.726 126.987 212.895 127.495 212.726C158.438 194.077 179.406 167.629 187.353 132.027C189.382 123.042 189.044 113.717 186.677 104.562C181.773 84.8965 165.371 71.3337 145.249 70.147C134.766 69.4688 124.62 70.6556 115.489 76.4198C114.813 81.3363 114.306 86.2528 113.291 90.8302C111.6 98.2897 107.711 104.393 100.778 108.123C95.7056 111.005 90.6328 111.005 87.9274 108.292C84.3764 104.732 84.3765 99.9851 86.5747 96.0858C89.6183 90.6607 93.3383 85.5746 97.2274 80.8276C99.7637 77.776 103.146 75.233 106.189 72.69C103.315 53.5326 85.2219 45.3949 63.5783 53.3631C62.9019 56.0756 62.2255 58.9577 61.38 61.6702C57.9982 71.6728 51.7419 79.3018 41.5964 82.8621C37.7073 84.2183 33.48 84.7269 30.0982 81.1667C27.5618 78.4542 27.5618 73.7072 30.2673 68.9602C34.6637 61.5007 41.2582 56.2451 48.3601 51.6677C50.8964 50.1419 53.4328 48.6161 55.9692 47.2598C52.5873 17.5913 26.04 -3.43102 0 8.4364C0.169091 6.23245 -1.03306e-05 4.36757 0.676354 3.35036C1.52181 2.16362 3.38181 1.48549 4.90363 1.14642C19.2764 -1.56614 32.6346 0.129206 43.6255 10.6403C51.9109 18.4389 57.491 27.9329 61.211 38.7831C61.7183 40.3089 62.2255 41.8347 62.9019 43.3605C62.9019 43.5301 63.24 43.6996 63.9164 44.2082C65.4382 44.0387 67.2982 44.0387 69.1582 43.6996C91.8164 40.1394 103.653 46.2426 114.136 67.4344C116.166 66.7563 118.533 66.0781 120.731 65.2305C133.751 60.8226 146.771 60.4835 159.96 64.8914C181.435 72.0119 195.3 90.4911 196.822 113.887C197.667 126.602 195.469 138.808 190.904 150.676C179.744 179.327 161.482 201.875 134.089 216.625C132.736 217.473 131.215 218.151 129.862 218.998C129.693 219.168 129.524 219.507 129.016 220.524C134.766 221.88 140.177 221.372 145.587 221.033C150.829 220.863 156.24 220.355 161.989 220.016C161.482 224.423 159.115 226.119 156.24 227.136C152.858 228.153 149.477 229.509 146.095 229.679C136.964 230.018 127.664 230.188 118.364 229.679C111.093 229.17 109.064 225.271 112.276 219.337C119.209 206.792 126.311 194.246 133.413 181.701C134.596 179.666 136.118 177.971 137.978 175.597C141.191 179.327 139.838 182.04 138.655 184.583C133.92 193.738 129.693 202.893 125.127 212.895ZM35.1709 76.0807C46.8382 74.5549 54.1091 67.0954 54.6164 56.5842C46.8382 61.6702 39.3982 66.2477 35.1709 76.0807ZM92.3237 102.359C102.3 99.9851 107.035 93.2037 106.02 82.8621C99.5947 88.2872 94.0147 93.3732 92.3237 102.359Z"
+                fill="#F66B0E"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_103_56">
+                <rect width="197" height="230" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <p>
+          We think the chair is the most important piece of furniture in your
+          home. Because if you love the chair you are sitting in chances are you
+          will love the rest of the room.
+        </p>
+      </div>
+      <div class="searchAndWallpaper">
+        <form action="">
+          <input
+            type="text"
+            placeholder=" search your product "
+          />
+         <button type="submit">&#xf002</button>
+         
+        </form>
+        
+      </div>
+    
+    </header>
+    <div class="background-Image">
+      <img src="./images/bg1a.png" alt="furnitures">
+    </div>
+    <section id="about" class="about-section">
+      
+      <div class="about-hero">
+
+        <div class="about-left">
+          <h2>About us</h2>
+         <p>Comfort is key and how you feel about your chair will affect how you feel and your mood.</p>
+         <div class="about-left-divs">
+          <div class="about-one about-left-div">
+            <div class="num">1</div>
+            <div class="about-sub-heading"> <h3>Mission</h3></div>
+            <div class="about-text"> <p>It makes people at ease and feel like they want to open up.</p> </div>
+          </div>
+          <div class="about-two about-left-div">
+            <div class="num">2</div>
+            <div class="about-sub-heading"> <h3>Motivation</h3></div>
+            <div class="about-text"> <p>The perfect mix of art that complements the room's style.</p> </div>
+          </div>
+          <div class="about-three about-left-div">
+            <div class="num">3</div>
+            <div class="about-sub-heading"> <h3>Vision</h3></div>
+            <div class="about-text"> <p>Along with a healthy dose of negative space to give the eyes spots to rest.</p> </div>
+          </div>
+          <div class="about-four about-left-div">
+            <div class="num">4</div>
+            <div class="about-sub-heading"> <h3>Goal</h3></div>
+            <div class="about-text"> <p>Art that has meaning to the people who live in the space.</p> </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="about-right">
+          
+          <div class="about-right-left">
+            <div class="about-img-container about-right-one">
+              <img src="./images/about-1.png" alt="">
+            </div>
+            <div class="about-img-container about-right-two">
+              <img src="./images/about-3.png" alt="">
+            </div>
+          </div>
+          <div class="about-right-right">
+            <div class="about-img-container about-right-three">
+              <img src="./images/about-2.png" alt="">
+
+            </div>
+            <div class="about-img-container about-right-four">
+              <img src="./images/about-4.png" alt="">
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+    
+    </section>
+
+    <section class="products" id="product">
+      <h2>Products</h2>
+      <div class="product-nav">
+        <ul>
+          <li>All</li>
+          <li>Chair</li>
+          <li>Table</li>
+          <li>Bed</li>
+          <li>Sofa</li>
+          <li>Cabinet</li>
+
+
+
+
+
+        </ul>
+      </div>
+
+      <div class="products-container">
+          <div class="card" data-type="chair">
+            <div class="product-img-div">
+              <img src="./images/p1.png" alt="stool">
+            </div>
+            <div class="card-bg">
+              <div class="item">Stool</div>
+              <div class="price">
+                <div class="item-price">$200</div>
+                <div class="price-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.4301 5.92969L20.5001 11.9997L14.4301 18.0697" stroke="#F66B0E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3.5 12H20.33" stroke="#F66B0E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- 2 -->
+          <div class="card" data-type="table">
+            <div class="product-img-div">
+              <img src="./images/p2.png" alt="table">
+            </div>
+            <div class="card-bg">
+              <div class="item">Tea Table</div>
+              <div class="price">
+                <div class="item-price">$150</div>
+                <div class="price-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.4301 5.92969L20.5001 11.9997L14.4301 18.0697" stroke="#F66B0E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3.5 12H20.33" stroke="#F66B0E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- 3 -->
+          <div class="card" data-type="sofa">
+            <div class="chair-5">
+              <img src="./images/p3.png" alt="sofa-light chair">
+            </div>
+            <div class="card-bg">
+              <div class="item">Sofa-Light</div>
+              <div class="price">
+                <div class="item-price">$300</div>
+                <div class="price-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.4301 5.92969L20.5001 11.9997L14.4301 18.0697" stroke="#F66B0E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3.5 12H20.33" stroke="#F66B0E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- 4 -->
+          <div class="card" data-type="sofa">
+            <div class="chair-5">
+              <img src="./images/p4.png" alt="sofa">
+            </div>
+            <div class="card-bg">
+              <div class="item">Sofa-Dark</div>
+              <div class="price">
+                <div class="item-price">$300</div>
+                <div class="price-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.4301 5.92969L20.5001 11.9997L14.4301 18.0697" stroke="#F66B0E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3.5 12H20.33" stroke="#F66B0E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- 5 -->
+          <div class="card" data-type="table">
+            <div class="chair-6">
+              <img src="./images/p5.png" alt="table">
+            </div>
+            <div class="card-bg">
+              <div class="item">Table Lamp</div>
+              <div class="price">
+                <div class="item-price">$50</div>
+                <div class="price-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.4301 5.92969L20.5001 11.9997L14.4301 18.0697" stroke="#F66B0E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3.5 12H20.33" stroke="#F66B0E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- 6 -->
+          <div class="card" data-type="chair">
+            <div class="chair-6">
+              <img src="./images/p6.png" alt="chair">
+            </div>
+            <div class="card-bg">
+              <div class="item">Chair</div>
+              <div class="price">
+                <div class="item-price">$200</div>
+                <div class="price-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.4301 5.92969L20.5001 11.9997L14.4301 18.0697" stroke="#F66B0E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3.5 12H20.33" stroke="#F66B0E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- 7 -->
+          <div class="card" data-type="Table">
+            <div class="chair-6">
+              <img src="./images/p7.png" alt="Bedside Table">
+            </div>
+            <div class="card-bg">
+              <div class="item">Bedside Table</div>
+              <div class="price">
+                <div class="item-price">$100</div>
+                <div class="price-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.4301 5.92969L20.5001 11.9997L14.4301 18.0697" stroke="#F66B0E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3.5 12H20.33" stroke="#F66B0E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- 8 -->
+          <div class="card" data-type="chair">
+            <div class=" chair-8">
+              <img src="./images/p8.png" alt="Light Chair">
+            </div>
+            <div class="card-bg">
+              <div class="item">Light Chair</div>
+              <div class="price">
+                <div class="item-price">$80</div>
+                <div class="price-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.4301 5.92969L20.5001 11.9997L14.4301 18.0697" stroke="#F66B0E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3.5 12H20.33" stroke="#F66B0E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+
+      </div>
+
+    </section>
+    <section class="testimonial-section">
+      <div class="testimonial-section-body">
+        <!-- <h2>What do customers say...</h2> -->
+        <div class="testimonial-hero">
+
+        <div class="testimonial-left">
+        <h2>What do customers say...</h2>
+
+          <div class="testimonial-left-img">
+            <img src="./images/testimonial.png" alt="Wade Warren testimonial">
+          </div>
+          <div class="testimonial-left-svg">
+            <svg width="157" id="star-svg" height="150" viewBox="0 0 157 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M78.5 0L86.2588 71.821L156.962 57.0061L91.054 86.579L126.992 149.244L78.5 95.7L30.0077 149.244L65.9461 86.579L0.0378418 57.0061L70.7412 71.821L78.5 0Z" fill="#F66B0E"/>
+              </svg>
+              
+          </div>
+
+        </div>
+        <div class="testimonial-right">
+          <div class="quotationSvg">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.225 29.0747H8.5C8.7 17.3997 11 15.4747 18.175 11.2247C19 10.7247 19.275 9.67468 18.775 8.82468C18.3 7.99968 17.225 7.72468 16.4 8.22468C7.95 13.2247 5 16.2747 5 30.7997V44.2747C5 48.5497 8.475 51.9997 12.725 51.9997H20.225C24.625 51.9997 27.95 48.6747 27.95 44.2747V36.7747C27.95 32.3997 24.625 29.0747 20.225 29.0747Z" fill="#F66B0E"/>
+              <path d="M47.275 29.0747H35.55C35.75 17.3997 38.05 15.4747 45.225 11.2247C46.05 10.7247 46.325 9.67468 45.825 8.82468C45.325 7.99968 44.275 7.72468 43.425 8.22468C34.975 13.2247 32.025 16.2747 32.025 30.8247V44.2997C32.025 48.5747 35.5 52.0247 39.75 52.0247H47.25C51.65 52.0247 54.975 48.6997 54.975 44.2997V36.7997C55 32.3997 51.675 29.0747 47.275 29.0747Z" fill="#F66B0E"/>
+              </svg>
+              
+          </div>
+          <h4>Amazing service</h4>
+          <p class="p1">Since the online marketplace can be a scary place, the presence of customer reviews on an online store helps establish authenticity, confidence, and trust among shoppers. </p>
+          <div class="testi-name">Wade Warren</div>
+          <p class="p2">Doctor</p>
+          <div class="direction-icon">
+            <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 30.3327C8.09329 30.3327 1.66663 23.906 1.66663 15.9993C1.66663 8.09268 8.09329 1.66602 16 1.66602C23.9066 1.66602 30.3333 8.09268 30.3333 15.9993C30.3333 23.906 23.9066 30.3327 16 30.3327ZM16 3.66602C9.19996 3.66602 3.66663 9.19935 3.66663 15.9993C3.66663 22.7993 9.19996 28.3327 16 28.3327C22.8 28.3327 28.3333 22.7993 28.3333 15.9993C28.3333 9.19935 22.8 3.66602 16 3.66602Z" fill="white" fill-opacity="0.6"/>
+              <path d="M17.68 21.7069C17.4267 21.7069 17.1734 21.6135 16.9734 21.4135L12.2667 16.7069C11.88 16.3202 11.88 15.6802 12.2667 15.2935L16.9734 10.5869C17.36 10.2002 18 10.2002 18.3867 10.5869C18.7734 10.9735 18.7734 11.6135 18.3867 12.0002L14.3867 16.0002L18.3867 20.0002C18.7734 20.3869 18.7734 21.0269 18.3867 21.4135C18.2 21.6135 17.9467 21.7069 17.68 21.7069Z" fill="white" fill-opacity="0.6"/>
+              </svg>
+              <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 30.3327C8.09329 30.3327 1.66663 23.906 1.66663 15.9993C1.66663 8.09268 8.09329 1.66602 16 1.66602C23.9066 1.66602 30.3333 8.09268 30.3333 15.9993C30.3333 23.906 23.9066 30.3327 16 30.3327ZM16 3.66602C9.19996 3.66602 3.66663 9.19935 3.66663 15.9993C3.66663 22.7993 9.19996 28.3327 16 28.3327C22.8 28.3327 28.3333 22.7993 28.3333 15.9993C28.3333 9.19935 22.8 3.66602 16 3.66602Z" fill="white" fill-opacity="0.6"/>
+                <path d="M14.32 21.7069C14.0667 21.7069 13.8134 21.6135 13.6134 21.4135C13.2267 21.0269 13.2267 20.3869 13.6134 20.0002L17.6134 16.0002L13.6134 12.0002C13.2267 11.6135 13.2267 10.9735 13.6134 10.5869C14 10.2002 14.64 10.2002 15.0267 10.5869L19.7334 15.2935C20.12 15.6802 20.12 16.3202 19.7334 16.7069L15.0267 21.4135C14.8267 21.6135 14.5734 21.7069 14.32 21.7069Z" fill="white" fill-opacity="0.6"/>
+                </svg>
+                
+          </div>
+        </div>
+      </div>
+      </div>
+
+    </section>
+    <!-- <form action=""></form> -->
+    <section class="form secttion contact">
+      <div class="contact-hero">
+      <div class="contact-left">
+          <div class="contact-right-left">
+            <div class="contact-img-container contact-right-one">
+              <img src="./images/c1.png" alt="">
+            </div>
+            <div class="contact-img-container contact-right-two">
+              <img src="./images/c3.png" alt="">
+            </div>
+          </div>
+          <div class="contact-right-right">
+            <div class="contact-img-container contact-right-three">
+              <img src="./images/c2.png" alt="">
+
+            </div>
+            <div class="contact-img-container contact-right-four">
+              <img src="./images/c4.png" alt="">
+            </div>
+          </div>  
+      </div>
+      <div class="contact-right">
+        <h2>Contact us</h2>
+        <p class="p3">Our team would love to hear from you!</p>
+        <form action="">
+          <div class="form-1">
+            <div class="form-1-firstName">
+            <input class="firstName" name="firstname" placeholder="First name" type="text">
+
+            </div>
+            <div class="form-1-lastName">
+            <input class="lastName" name="lastname" placeholder="Last name" type="text">
+
+            </div>
+          </div>
+          <div class="form-2">
+            <input type="email" name="email" id="email" placeholder="Email address">
+          </div>
+          <div class="form-3">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Mesage"></textarea>
+          </div>
+          <button type="submit">Send message</button>
+        </form>
+      </div>
+    </div>
+
+    </section>
+    <footer>
+      <div class="footer-hero">
+        <div class="footer-one each-1" >
+          <div class="logo-footer">
+            <p>Zing<span class="logo-gold-footer">.</span></p>
+          </div>
+          <p>4517 Washington Ave. Manchester, Kentucky 39495</p>
+        </div>
+        <div class="footer-two each-1" >
+          <ul>
+            <li class="footer-heading">Quick link</li>
+            <li>gallery
+            </li>
+            <li>About us</li>
+            <li>Buy online</li>
+          </ul>
+        </div>
+        <div class="footer-three each-1" >
+          <ul>
+            <li class="footer-heading">Policy</li>
+            <li>Terms & conditions
+            </li>
+            <li>Privacy policy</li>
+            <li class="footer-a ">a</li>
+        </div>
+        <div class="footer-four each-1" >
+          <ul>
+            <li class="footer-heading">Social</li>
+            <li>Facebook
+            </li>
+            <li>Instagram</li>
+            <li>Linkedin</li>
+        </div>
+      </div>
+      <hr>
+      <p>Copyright ©2022 Zing Inc. All right reserved.</p>
+      <p><a href="">Developed by <span>Oluwaseun Sodeeq</span> ©2023.</a></p>
+     
+
+    </footer>
+  </body>
+</html>
